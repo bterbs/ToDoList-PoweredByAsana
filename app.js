@@ -3,8 +3,10 @@ const path = require('path');
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res) => {
-  res.sendFile('index.html', { root: path.join(__dirname, '/public') });
+  res.sendFile('index.html');
 });
 
 // app listening on port 5000 if not otherwise designated (for Heroku deployment)
