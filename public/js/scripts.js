@@ -1,10 +1,13 @@
 $(document).ready(function() {
-  const getTasks = () => {
-    const param = 'search';
+  const getTasks = input => {
+    const projectID = input;
+    console.log('Searching projectID::', projectID);
 
     $.ajax({
-      url: `/asana/${param}`,
-      type: 'GET'
+      url: `/asana/search`,
+      contentType: 'application/json; charset=utf-8',
+      type: 'GET',
+      data: { id: projectID }
     })
       .done(function(results) {
         console.log('success!', results);
@@ -30,5 +33,9 @@ $(document).ready(function() {
       });
   };
 
-  $('#get-btn').on('click', getTasks);
+  $('#get-btn').on('click', () => {
+    let formData = $('#form').val();
+    console.log('this is the form data', formData);
+    getTasks(formData);
+  });
 });
