@@ -11,9 +11,18 @@ body {
   width: 100px;
 }
 
+.purple {
+  background-color: #6a67ce; /* Asana dark-purple */
+}
+
+.purple:hover {
+  background-color: #fc636b; /* Asana light-red */
+  color: white;
+}
+
 /* Container Styling */
 .container-fluid {
-  background-color: lightblue;
+  background-color: #1aafd0;
   border: white 0.5px solid;
 }
 
