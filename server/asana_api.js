@@ -5,7 +5,6 @@ const API_KEY = '0/c18cc4ebb53d0d52a5ccf3873c7b58fc';
 
 function search(pID) {
   let projectID = pID;
-  console.log('This is the search function projectID', projectID);
   return axios
     .get(`https://app.asana.com/api/1.0/projects/${projectID}/tasks`, {
       headers: { Authorization: `Bearer ${API_KEY}` }

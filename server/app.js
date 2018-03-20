@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 // routes to access Asana's api endpoints
 app.get('/asana/search', (req, res) => {
   const pID = req.query.id;
-  console.log('this is the projectID', pID);
   AsanaApi.search(pID)
     .then(results => {
       res.set('Access-Control-Allow-Origin', '*');
