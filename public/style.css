@@ -39,6 +39,7 @@ body {
 #list-output {
   background-color: white;
   list-style-type: none;
+  padding-top: 10px;
   width: 100%;
 }
 
@@ -46,4 +47,13 @@ body {
 .list-item li,
 .list-item button {
   display: inline-block;
+}
+
+.complete-task-btn {
+  background-color: grey;
+  color: white;
+}
+
+.complete-task-btn:hover {
+  background-color: #3be8b0;
 }
