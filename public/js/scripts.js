@@ -1,6 +1,7 @@
 $(document).ready(function() {
-  const getTasks = input => {
-    const projectID = input;
+  // getTasks function takes projectID as argument, initiates ajax call and returns formatted task list on page.
+  const getTasks = projID => {
+    const projectID = projID;
     console.log('Searching projectID::', projectID);
 
     $.ajax({
@@ -16,16 +17,26 @@ $(document).ready(function() {
           taskNodes.push(
             $(`
               <div class="list-item">
-              <button id=${task._id} class="complete-task-btn">&#x269E</button>
-              <li class="task-item">${task.name}</li>
+              <button id=${task.id} class="complete-task-btn">&#x269E</button>
+              <a href="https://app.asana.com/0/${projectID}/${
+              task.id
+            }"><li class="task-item">${task.name}</li></a>
               </div>`)
           );
         });
-        console.log(taskNodes);
+
         $('#list-output').empty();
-        $('#list-output').append('<h4>Project</h4>');
+        $('#list-output').append(`<h4>Project: ${projectID} </h4>`);
         taskNodes.forEach(node => {
           $('#list-output').append(node);
+        });
+
+        // add event listener to task-complete buttons that remove task on click
+        $('.complete-task-btn').on('click', function() {
+          console.log('clicked the complete button!');
+          $(this)
+            .closest('div')
+            .fadeOut();
         });
       })
       .fail(function(xhr) {
