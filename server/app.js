@@ -1,10 +1,14 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 const AsanaApi = require('./asana_api.js');
 
 const app = express();
 
 app.use(express.static('public'));
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing
 
 app.get('/', (req, res) => {
   res.sendFile('../public/index.html');
@@ -12,9 +16,9 @@ app.get('/', (req, res) => {
 
 // routes to access Asana's api endpoints
 app.get('/asana/search', (req, res) => {
-  let params = req.query;
-  console.log('query::', req.query);
-  AsanaApi.search()
+  const pID = req.query.id;
+  console.log('this is the projectID', pID);
+  AsanaApi.search(pID)
     .then(results => {
       res.set('Access-Control-Allow-Origin', '*');
       res.json(results);
