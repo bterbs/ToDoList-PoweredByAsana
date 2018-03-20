@@ -33,3 +33,17 @@ body {
 .title {
   text-align: right;
 }
+
+/* Task List Styling */
+
+#list-output {
+  background-color: white;
+  list-style-type: none;
+  width: 100%;
+}
+
+.list-item p,
+.list-item li,
+.list-item button {
+  display: inline-block;
+}
