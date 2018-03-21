@@ -1,7 +1,6 @@
-// const { makeQuery } = require('../common/utils');
 const axios = require('axios');
-// TODO: move this api key to a config
-const API_KEY = '0/c18cc4ebb53d0d52a5ccf3873c7b58fc';
+
+const { API_KEY } = require('../config.js').keys;
 
 function search(pID) {
   let projectID = pID;
