@@ -4,7 +4,7 @@
 
 These instructions will get a copy of the project up and running on your local machine for development and testing purposes.
 
-1. Clone or fork git repo
+1. Clone or fork git repo `git clone https://github.com/bterbs/ToDoList-PoweredByAsana.git`
 2. Install your dependencies: `$ npm install`
 3. An Asana Personal Access Token is necessary for the application to function:
 
