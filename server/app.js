@@ -14,9 +14,9 @@ app.get('/', (req, res) => {
   res.sendFile('../public/index.html');
 });
 
-// routes to access Asana's api endpoints
-app.get('/asana/search', (req, res) => {
-  const pID = req.query.id;
+// route to access Asana's api endpoint
+app.get('/asana', (req, res) => {
+  const pID = req.query.project;
   AsanaApi.search(pID)
     .then(results => {
       res.set('Access-Control-Allow-Origin', '*');
@@ -28,7 +28,7 @@ app.get('/asana/search', (req, res) => {
     });
 });
 
-// app listening on port 5000 if not otherwise designated (for Heroku deployment)
+// app listening on port 5000 if not otherwise designated
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`the server is listening on ${PORT}`);
