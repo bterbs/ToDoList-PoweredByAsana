@@ -19,7 +19,7 @@ These instructions will get a copy of the project up and running on your local m
 
 ### Accessing the application
 
-"Log on to [http://localhost:5000](http://localhost:5000) to access the client front end. The Express server will be running on port 5000."
+Log on to [http://localhost:5000](http://localhost:5000) to access the client front end. The Express server will be running on port 5000.
 
 ### Using the application
 
