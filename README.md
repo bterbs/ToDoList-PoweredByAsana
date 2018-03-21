@@ -7,12 +7,13 @@ These instructions will get a copy of the project up and running on your local m
 1. Clone or fork git repo
 2. Install your dependencies: `$ npm install`
 3. An Asana Personal Access Token is necessary for the application to function:
-   a. Log onto: [https://asana.com/developers/documentation/getting-started/auth](https://asana.com/developers/documentation/getting-started/auth) for information on getting a personal access token.
-   b. Create an empty file called 'config.js' in the root folder of your application.
-   c. Paste this code in the file and save:
-   `const keys = {
-   API_KEY: '[paste your personal access token here]'
-   };
+
+   1. Log onto: [https://asana.com/developers/documentation/getting-started/auth](https://asana.com/developers/documentation/getting-started/auth) for information on getting a personal access token.
+   2. Create an empty file called 'config.js' in the root folder of your application.
+   3. Paste this code in the file and save:
+      `const keys = {
+      API_KEY: '[paste your personal access token here]'
+      };
 
    module.exports = { keys };`
 
