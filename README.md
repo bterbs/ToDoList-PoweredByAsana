@@ -1,7 +1,37 @@
-# AsanaFE
+# ToDoList Powered By Asana
 
-To run application:
+### Getting Started
 
-1. Install your dependencies: > npm install
-2. Run the server: > npm run start
-3. App running on localhost:5000 (in development)
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+1. Clone or fork git repo
+2. Install your dependencies: `$ npm install`
+3. An Asana Personal Access Token is necessary for the application to function:
+   a. Log onto: [https://asana.com/developers/documentation/getting-started/auth](https://asana.com/developers/documentation/getting-started/auth) for information on getting a personal access token.
+   b. Create an empty file called 'config.js' in the root folder of your application.
+   c. Paste this code in the file and save:
+   `const keys = {
+   API_KEY: '[paste your personal access token here]'
+   };
+
+   module.exports = { keys };`
+
+4. Run the server: `$ npm run start`
+
+* This script uses `nodemon` It starts both the Node Express server in a way that will reload on changes to the code.
+
+### Accessing the application
+
+"Log on to [http://localhost:5000](http://localhost:5000) to access the client front end. The Express server will be running on port 5000."
+
+## Built With
+
+* Back End
+
+  * [Node.js](https://nodejs.org)
+  * [pg-promise](https://github.com/vitaly-t/pg-promise)
+  * [Express](https://expressjs.com/)
+
+* Front End
+  * [Bootstrap](https://getbootstrap.com/)
+  * [jQuery](https://jquery.com/)
