@@ -11,11 +11,7 @@ These instructions will get a copy of the project up and running on your local m
    1. Log onto: [https://asana.com/developers/documentation/getting-started/auth](https://asana.com/developers/documentation/getting-started/auth) for information on getting a personal access token.
    2. Create an empty file called 'config.js' in the root folder of your application.
    3. Paste this code in the file and save:
-      `const keys = {
-      API_KEY: '[paste your personal access token here]'
-      };
-
-   module.exports = { keys };`
+      `const keys = { API_KEY: "[paste your personal access token here]"}; module.exports = { keys };`
 
 4. Run the server: `$ npm run start`
 
