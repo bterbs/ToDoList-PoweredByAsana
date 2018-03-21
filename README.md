@@ -27,12 +27,12 @@ Log on to [http://localhost:5000](http://localhost:5000) to access the client fr
 
 2. It will then
 
-3. List the project name (by {projectID})
-4. Display all tasks within the project
-5. Each individual task will link to the associated task in app.asana.com
-6. Include a button for each task that will hide the task from view.
+. List the project name (by {projectID})
+. Display all tasks within the project
+. Each individual task will link to the associated task in app.asana.com
+. Include a button for each task that will hide the task from view.
 
-7. Enter a different Project ID number and click "Get Tasks" once more to view next Project.
+3. Enter a different Project ID number and click "Get Tasks" once more to view next Project.
 
 ## Built With
 
