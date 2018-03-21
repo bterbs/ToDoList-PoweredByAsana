@@ -16,7 +16,7 @@ These instructions will get a copy of the project up and running on your local m
 
 5. Run the server: `$ npm run start`
 
-* This script uses `nodemon` It starts both the Node Express server in a way that will reload on changes to the code.
+* This script uses `nodemon` It starts the Node Express server in a way that will reload on changes to the code.
 
 ### Accessing the application
 
@@ -24,7 +24,7 @@ Log on to [http://localhost:5000](http://localhost:5000) to access the client fr
 
 ### Using the application
 
-1. Enter the Project ID number associated with your Asana project in the Search Form and click "Get Tasks" (it should be a number similar to '600042698902717')
+1. Enter the Project ID number associated with your Asana project in the Search Form and click "Get Tasks" (it should be a number similar to '600042698902717') OR pass in a project ID to page using a query parameter, or front-end routing: e.g. /asana?project={projectID}
 
 2. ToDoList will then
 
@@ -34,8 +34,6 @@ Log on to [http://localhost:5000](http://localhost:5000) to access the client fr
 * Include a button for each task that will hide the task from view.
 
 3. Enter a different Project ID number and click "Get Tasks" once more to view next Project.
-
-or 3b. Pass in a project ID to page using a query parameter, or front-end routing: e.g. /asana?project={projectID} OR /asana/{projectID}
 
 ## Built With
 
