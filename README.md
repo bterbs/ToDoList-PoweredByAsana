@@ -24,14 +24,15 @@ Log on to [http://localhost:5000](http://localhost:5000) to access the client fr
 ### Using the application
 
 1. Enter the Project ID number associated with your Asana project in the Search Form and click "Get Tasks"
-2. It will then:
 
-* List the project name (by {projectID})
-* Display all tasks within the project
-* Each individual task will link to the associated task in app.asana.com
-* Include a button for each task that will hide the task from view.
+2. It will then
 
-3. Enter a different Project ID number and click "Get tasks" once more to view next task.
+3. List the project name (by {projectID})
+4. Display all tasks within the project
+5. Each individual task will link to the associated task in app.asana.com
+6. Include a button for each task that will hide the task from view.
+
+7. Enter a different Project ID number and click "Get Tasks" once more to view next Project.
 
 ## Built With
 
