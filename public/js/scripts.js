@@ -1,3 +1,4 @@
+let taskRemove;
 $(document).ready(function() {
   // getTasks function takes projectID as argument, initiates ajax call and returns formatted task list on page.
   const getTasks = projID => {
@@ -13,7 +14,7 @@ $(document).ready(function() {
       .done(function(results) {
         console.log('success!', results);
         const taskNodes = [];
-        results.data.data.forEach(task => {
+        results.data.forEach(task => {
           taskNodes.push(
             $(`
               <div class="list-item">
@@ -47,4 +48,13 @@ $(document).ready(function() {
     let formData = $('#form').val();
     getTasks(formData);
   });
+
+  // Event listener for buttons that remove task from list
+  taskRemove = function() {
+    $('.complete-task-btn').on('click', function() {
+      $(this)
+        .closest('div')
+        .fadeOut();
+    });
+  };
 });

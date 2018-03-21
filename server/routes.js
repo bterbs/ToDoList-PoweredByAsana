@@ -12,13 +12,17 @@ router.get('/asana', (req, res) => {
   AsanaApi.search(pID)
     .then(results => {
       res.set('Access-Control-Allow-Origin', '*');
-      console.log(results.data.data);
       if (req.xhr) {
         // request was AJAX (XHR)
         res.json({ data: results.data.data });
       } else {
         // render html template instead
-        res.render('events/results.ejs', { data: results.data.data });
+        console.log('the projectID is ', pID);
+        res.render('events/results.ejs', {
+          data: results.data.data,
+          projectID: pID,
+          clickHandler: 'taskRemove()'
+        });
       }
     })
     .catch(err => {
