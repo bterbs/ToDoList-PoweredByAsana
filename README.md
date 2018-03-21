@@ -35,6 +35,8 @@ Log on to [http://localhost:5000](http://localhost:5000) to access the client fr
 
 3. Enter a different Project ID number and click "Get Tasks" once more to view next Project.
 
+or 3b. Pass in a project ID to page using a query parameter, or front-end routing: e.g. /asana?project={projectID} OR /asana/{projectID}
+
 ## Built With
 
 * Back End
