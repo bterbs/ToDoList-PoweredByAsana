@@ -5,10 +5,10 @@ $(document).ready(function() {
     console.log('Searching projectID::', projectID);
 
     $.ajax({
-      url: `/asana/search`,
+      url: `/asana`,
       contentType: 'application/json; charset=utf-8',
       type: 'GET',
-      data: { id: projectID }
+      data: { project: projectID }
     })
       .done(function(results) {
         console.log('success!', results);
@@ -31,9 +31,8 @@ $(document).ready(function() {
           $('#list-output').append(node);
         });
 
-        // add event listener to task-complete buttons that remove task on click
+        // Event listener for buttons that remove task from list
         $('.complete-task-btn').on('click', function() {
-          console.log('clicked the complete button!');
           $(this)
             .closest('div')
             .fadeOut();
@@ -46,7 +45,6 @@ $(document).ready(function() {
 
   $('#get-btn').on('click', () => {
     let formData = $('#form').val();
-    console.log('this is the form data', formData);
     getTasks(formData);
   });
 });
