@@ -2,8 +2,8 @@ const axios = require('axios');
 
 const { API_KEY } = require('../config.js').keys;
 
-function search(pID) {
-  let projectID = pID;
+function search(projectID) {
+  // let projectID = pID;
   return axios
     .get(`https://app.asana.com/api/1.0/projects/${projectID}/tasks`, {
       headers: { Authorization: `Bearer ${API_KEY}` }
