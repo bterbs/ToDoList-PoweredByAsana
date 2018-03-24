@@ -16,7 +16,6 @@ router.get('/asana', (req, res) => {
         res.json({ data: results.data.data });
       } else {
         // render html template instead
-        console.log('the projectID is ', pID);
         res.render('events/results.ejs', {
           data: results.data.data,
           projectID: pID,
