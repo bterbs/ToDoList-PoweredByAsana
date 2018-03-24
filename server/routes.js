@@ -11,7 +11,6 @@ router.get('/asana', (req, res) => {
   const pID = req.query.project;
   AsanaApi.search(pID)
     .then(results => {
-      res.set('Access-Control-Allow-Origin', '*');
       if (req.xhr) {
         // request was AJAX (XHR)
         res.json({ data: results.data.data });
