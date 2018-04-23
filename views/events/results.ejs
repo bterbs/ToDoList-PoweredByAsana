@@ -1,0 +1,20 @@
+<%- include ../partials/header.ejs %>
+
+<!-- This is where the tasks will render -->
+<div>
+  <ul id="list-output">
+    <h3>Project: <%=projectID%></h3>
+    <% data.forEach(function(task){ %>
+      <div class="list-item">
+      <button id="<%=task.id%>" class="complete-task-btn" onclick='<%= clickHandler %>'>&#x269E</button>
+      <a href="https://app.asana.com/0/<%=projectID%>/<%=task.id%>"><li class="task-item"><%=task.name%></li></a>
+      </div>
+    <%})%>
+  </ul>
+</div>
+
+<!-- Closure for Container -->
+</div>
+
+
+<%- include ../partials/footer.ejs %>
